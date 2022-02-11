@@ -1,0 +1,14 @@
+# Modules
+node_modules/
+yarn.lock
+yarn-error.log
+
+.DS_Store
+/.DS_Store
+
+# build
+dist/
+
+# VScode local history
+.history/
+.github/
