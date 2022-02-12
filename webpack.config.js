@@ -35,6 +35,19 @@ module.exports = {
     rules: [
       {
         test: /\.(ts|tsx)$/,
+        include: [path.resolve('./src'), path.resolve('node_modules/')],
+        exclude: [/node_modules[\\/]core-js/, /node_modules[\\/]webpack[\\/]buildin/],
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              babelrc: true,
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(ts|tsx)$/,
         use: 'ts-loader',
         exclude: /node_modules/,
       },
